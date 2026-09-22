@@ -86,7 +86,7 @@ button{ font-family:inherit; cursor:pointer; }
   display:flex; align-items:center; justify-content:space-between;
   height:96px;
 }
-.brand-logo{ display:flex; align-items:center; height:62px; }
+.brand-logo{ display:flex; align-items:center; height:72px; }
 .brand-logo img{ height:100%; width:auto; }
 
 .main-nav{ display:flex; align-items:center; gap:8px; }
@@ -537,7 +537,7 @@ button{ font-family:inherit; cursor:pointer; }
 /* ---------- footer ---------- */
 .site-footer{ background:var(--graphite); color:#c9d3dc; padding:64px 0 28px; }
 .footer-grid{ display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:44px; margin-bottom:48px; }
-.footer-brand .brand-logo{ height:30px; margin-bottom:16px; }
+.footer-brand .brand-logo{ height:68px; margin-bottom:18px; }
 .footer-brand .brand-logo img{ filter:brightness(0) invert(1); }
 .footer-brand p{ color:#9aa5b1; font-size:13px; max-width:280px; }
 .footer-col h4{
