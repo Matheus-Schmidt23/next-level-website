@@ -17,9 +17,9 @@ Conteúdo e identidade visual baseados em:
 site/
 ├── index.html          Home
 ├── sobre.html           Sobre
-├── servicos.html         Serviços e Planos
+├── servicos.html         Serviços
 ├── contato.html          Contato
-├── area-medica.html      Área Médica (redução de tributos para clínicas)
+├── clinicas-medicas.html Clínicas Médicas (redução de tributos para clínicas)
 ├── README.md            este arquivo
 └── assets/
     ├── css/
