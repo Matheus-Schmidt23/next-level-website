@@ -41,7 +41,7 @@ site/
         ├── dados-abstrato.jpg    composição abstrata de gráficos (Serviços "Parceria RP2C")
         ├── cta-bg.png            fundo das faixas de CTA final
         ├── vidro-predio.jpg      fachada de vidro escura — não usada hoje
-        ├── segmentos/            fotos da grade de segmentos da Home (cigarros e distribuidora não usadas)
+        ├── segmentos/            fotos da grade de segmentos (Home e Serviços; cigarros e distribuidora não usadas)
         └── icons/                ícones vetoriais gerados sob medida (linha, azul da marca)
 ```
 
