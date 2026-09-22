@@ -397,7 +397,7 @@ button{ font-family:inherit; cursor:pointer; }
   overflow-x:auto; border-radius:var(--radius); background:#fff;
   box-shadow:0 24px 60px rgba(5,15,30,.35); -webkit-overflow-scrolling:touch;
 }
-.pricing-table{ width:100%; min-width:760px; border-collapse:collapse; }
+.pricing-table{ width:100%; min-width:680px; border-collapse:collapse; }
 .pricing-table th, .pricing-table td{ padding:14px 16px; text-align:center; border-bottom:1px solid var(--line); }
 .pricing-table thead th{ background:var(--blue1); color:#fff; vertical-align:top; padding-top:22px; position:relative; }
 .pricing-table thead th:first-child{ background:transparent; }
@@ -425,8 +425,16 @@ button{ font-family:inherit; cursor:pointer; }
 }
 .pricing-table .check{ background-image:url(../img/icons/icon-check.svg); }
 .pricing-table .cross{ background-image:url(../img/icons/icon-cross.svg); }
-.pricing-table tfoot td{ padding:20px 16px; }
-.pricing-table tfoot .btn{ width:100%; justify-content:center; }
+.pricing-table tfoot td{ padding:20px 12px; }
+.pricing-table tfoot .btn{
+  width:100%; justify-content:center; white-space:normal; text-align:center;
+  padding:11px 12px; font-size:11.5px; line-height:1.3;
+}
+/* desktop: a tabela cabe inteira no container, sem rolagem horizontal */
+.pricing-table th, .pricing-table td{ padding-left:12px; padding-right:12px; }
+.pricing-table tbody th{ white-space:normal; width:22%; }
+.pricing-table thead th.table-logo{ padding:16px 20px; }
+.pricing-table thead th.table-logo img{ max-width:170px; }
 
 /* ---------- FAQ ---------- */
 .faq-list{ border-top:1px solid var(--line); }
