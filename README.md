@@ -90,15 +90,12 @@ borda tracejada laranja) ou com a classe `.todo` (texto laranja sublinhado trace
 para ficarem visíveis durante a revisão. **Buscar por `[a confirmar]` e por `todo` nos
 arquivos HTML para encontrar todos os pontos.**
 
-1. **Número de WhatsApp** — hoje todos os botões apontam para o placeholder
-   `5500000000000`. Assim que o número real for definido:
-   - Busca e substituição em todos os arquivos `.html` da pasta `site/`, trocando
-     `5500000000000` pelo número real (DDI+DDD+número, só dígitos — ex.: `5511999998888`).
-   - Opcionalmente, atualizar também a constante `whatsappNumber` em
-     `assets/js/main.js` (usada apenas para o botão com mensagem customizada da Home).
-2. **E-mail de contato** — placeholders `mailto:#` na página `contato.html` e nos
+1. **Número de WhatsApp** — ✅ definido: (19) 98287-4127 (`5519982874127`), já aplicado
+   em todos os `href` e na constante `whatsappNumber` de `assets/js/main.js`. Para trocar
+   no futuro, substitua `5519982874127` nos `.html` e na constante.
+2. **E-mail de contato** — placeholder `XXXXXXX` (`mailto:XXXXXXX`) em `contato.html` e nos
    rodapés de todas as páginas.
-3. **Endereço / região de atendimento** — placeholder em `contato.html`.
+3. **Endereço** — falta o CEP (`XXXXXXX`) em `contato.html`.
 4. **Planos (Bronze / Prata / Ouro)** — nomes, composição e valores em revisão interna
    (Elber e João, conforme reunião de 21/09/2026). Ver nota em `servicos.html`.
 5. **Perguntas frequentes** — perguntas de exemplo; validar com João/Eduarda e
