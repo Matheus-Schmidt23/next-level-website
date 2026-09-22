@@ -8,7 +8,7 @@
  * só dígitos) antes de publicar o site. Ver README.md > "Pendências de conteúdo".
  */
 const NEXT_LEVEL_CONFIG = {
-  whatsappNumber: "5500000000000", // [a confirmar] — substituir pelo número real
+  whatsappNumber: "5500000000000", // XXXXXXX — substituir pelo número real (DDI+DDD+número)
   whatsappMessageDefault: "Olá! Vim pelo site da Next Level e quero saber mais sobre a contabilidade."
 };
 
