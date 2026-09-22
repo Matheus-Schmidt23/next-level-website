@@ -19,6 +19,7 @@ site/
 ├── sobre.html           Sobre
 ├── servicos.html         Serviços e Planos
 ├── contato.html          Contato
+├── area-medica.html      Área Médica (redução de tributos para clínicas)
 ├── README.md            este arquivo
 └── assets/
     ├── css/
