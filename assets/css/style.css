@@ -228,13 +228,10 @@ button{ font-family:inherit; cursor:pointer; }
   font-size:13.5px; color:#3d4650; margin-bottom:12px; padding-left:26px; position:relative;
 }
 .check-list li:last-child{ margin-bottom:0; }
+/* ícones de check/x: SVGs do Magnific (Flaticon) em assets/img/icons/ */
 .check-list li::before{
-  content:''; position:absolute; left:0; top:5px; width:15px; height:15px; border-radius:50%;
-  background:var(--blue-soft); border:1.5px solid var(--blue2);
-}
-.check-list li::after{
-  content:''; position:absolute; left:4.5px; top:8.5px; width:6px; height:3px; border-left:1.5px solid var(--blue2);
-  border-bottom:1.5px solid var(--blue2); transform:rotate(-45deg);
+  content:''; position:absolute; left:0; top:4px; width:17px; height:17px;
+  background:url(../img/icons/icon-check.svg) center/contain no-repeat;
 }
 
 /* cartões sólidos flutuando sobre foto (planos, time, contato) */
@@ -423,19 +420,11 @@ button{ font-family:inherit; cursor:pointer; }
 .pricing-table tbody td.featured-col{ background:rgba(25,118,185,.05); }
 .pricing-table tbody tr:last-child th, .pricing-table tbody tr:last-child td{ border-bottom:none; }
 .pricing-table .check, .pricing-table .cross{
-  display:inline-flex; width:22px; height:22px; border-radius:50%; align-items:center; justify-content:center;
+  display:inline-block; width:22px; height:22px; vertical-align:middle;
+  background:center/contain no-repeat;
 }
-.pricing-table .check{ background:var(--blue-soft); border:1.5px solid var(--blue2); }
-.pricing-table .check::after{
-  content:''; width:8px; height:4px; border-left:1.5px solid var(--blue2); border-bottom:1.5px solid var(--blue2);
-  transform:rotate(-45deg) translate(1px,-1px);
-}
-.pricing-table .cross{ background:#fdeceb; }
-.pricing-table .cross::after{
-  content:''; width:9px; height:9px; background:
-    linear-gradient(45deg, transparent 42%, #d64f42 42%, #d64f42 58%, transparent 58%),
-    linear-gradient(-45deg, transparent 42%, #d64f42 42%, #d64f42 58%, transparent 58%);
-}
+.pricing-table .check{ background-image:url(../img/icons/icon-check.svg); }
+.pricing-table .cross{ background-image:url(../img/icons/icon-cross.svg); }
 .pricing-table tfoot td{ padding:20px 16px; }
 .pricing-table tfoot .btn{ width:100%; justify-content:center; }
 
