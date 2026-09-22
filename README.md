@@ -51,7 +51,8 @@ O header de toda página mostra uma foto real, e nunca há branco sobre branco. 
 página alterna quatro tipos de seção:
 
 - **`.photo-section`** — foto full-bleed com overlay (`.overlay-brand` ou `.overlay-dark`),
-  para blocos de alto impacto (Recuperação tributária, Planos, Clínicas, Parceria, Requisitos).
+  para blocos de alto impacto (Recuperação tributária, Planos, Parceria, Requisitos). A variante
+  `.solid-dark` troca a foto por azul escuro sólido (faixa de Clínicas no fim de Serviços).
 - **`.section.section-alt`** — fundo Azul Névoa (`--blue-mist`, #D2E6F4), usado sempre que a
   seção tem cards brancos (features, estatísticas, contato).
 - **`.section`** — fundo branco, para blocos sem cards brancos (segmentos, FAQ). Se houver
@@ -61,7 +62,7 @@ página alterna quatro tipos de seção:
 Sequência por página (P = foto, A = Azul Névoa, B = branco, G = gradiente, D = rodapé escuro):
 - Home: P → A → P → B → G → D
 - Sobre: P → A → B → G → D
-- Serviços: P → A → P → B → P → P → B → G → D
+- Serviços: P → A → P → B → P → B → E → G → D  (E = faixa em azul escuro sólido, `.photo-section.solid-dark`, sem foto)
 - Clínicas: P → A → P → A → B → G → D
 - Contato: P → A → D
 
