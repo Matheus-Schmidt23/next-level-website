@@ -99,6 +99,27 @@ button{ font-family:inherit; cursor:pointer; }
 .main-nav ul a:hover{ background:var(--blue-soft); color:var(--blue1); }
 .main-nav ul a.is-active{ background:var(--blue-soft); color:var(--blue1); }
 
+/* submenu (Serviços → Simples Nacional / Clínicas Médicas): abre no hover e no foco do teclado */
+.main-nav .has-sub{ position:relative; }
+.main-nav .has-sub > a{ display:flex; align-items:center; gap:6px; }
+.main-nav .has-sub > a::after{
+  content:''; width:6px; height:6px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg) translateY(-2px); transition:transform .2s ease;
+}
+.main-nav .sub-menu{
+  position:absolute; top:100%; left:0; min-width:210px; padding:8px;
+  display:flex; flex-direction:column; align-items:stretch; gap:2px;
+  background:#fff; border:1px solid var(--line); border-radius:var(--radius-sm); box-shadow:var(--shadow-hover);
+  opacity:0; visibility:hidden; transform:translateY(6px);
+  transition:opacity .2s ease, transform .2s ease, visibility .2s;
+  z-index:120;
+}
+.main-nav .sub-menu a{ border-radius:8px; white-space:nowrap; }
+.main-nav .has-sub:hover .sub-menu, .main-nav .has-sub:focus-within .sub-menu{
+  opacity:1; visibility:visible; transform:translateY(0);
+}
+.main-nav .has-sub:hover > a::after, .main-nav .has-sub:focus-within > a::after{ transform:rotate(225deg) translateY(-2px); }
+
 .header-actions{ display:flex; align-items:center; gap:14px; }
 .header-actions .btn{ padding:11px 22px; font-size:12px; }
 .main-nav .header-actions{ display:none; }
@@ -557,6 +578,13 @@ button{ font-family:inherit; cursor:pointer; }
   .main-nav.is-open{ transform:translateX(0); }
   .main-nav ul{ flex-direction:column; align-items:flex-start; width:100%; gap:2px; }
   .main-nav a{ width:100%; padding:14px 12px; font-size:15px; }
+  .main-nav .has-sub{ width:100%; }
+  .main-nav .has-sub > a::after{ display:none; }
+  .main-nav .sub-menu{
+    position:static; opacity:1; visibility:visible; transform:none;
+    border:none; box-shadow:none; padding:0 0 0 16px; min-width:0; background:transparent;
+  }
+  .main-nav .sub-menu a{ font-size:14px; padding:10px 12px; color:#6b7280; }
   .main-nav .header-actions{ display:flex; margin-top:12px; width:100%; }
   .main-nav .header-actions .btn{ width:100%; justify-content:center; }
   .nav-toggle{ display:flex; }

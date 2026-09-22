@@ -56,6 +56,9 @@ const NEXT_LEVEL_CONFIG = {
       const href = link.getAttribute("href");
       if (href === currentPage || (currentPage === "" && href === "index.html")) {
         link.classList.add("is-active");
+        // item de submenu ativo também destaca o item pai (ex.: Clínicas Médicas → Serviços)
+        const parent = link.closest(".has-sub");
+        if (parent) parent.querySelector(":scope > a").classList.add("is-active");
       }
     });
   }
