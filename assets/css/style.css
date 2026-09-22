@@ -170,6 +170,18 @@ button{ font-family:inherit; cursor:pointer; }
 .hero-inner h1{ font-size:clamp(30px,4.2vw,46px); font-weight:800; max-width:660px; color:#fff; text-shadow:0 2px 20px rgba(5,15,30,.35); }
 .hero-inner p.lead{ color:#eef3f9; font-size:15.5px; max-width:560px; margin-top:14px; text-shadow:0 1px 10px rgba(5,15,30,.3); }
 
+/* heros centralizados no meio da imagem (horizontal e vertical), com respiro igual em cima e embaixo */
+.hero, .hero-inner{ align-items:center; text-align:center; }
+.hero .wrap{ padding-top:80px; padding-bottom:80px; }
+.hero-inner{ padding:80px 0; }
+.hero-content{ margin:0 auto; }
+.hero h1, .hero-inner h1, .hero p.lead, .hero-inner p.lead{ margin-left:auto; margin-right:auto; }
+.hero .hero-actions, .hero-inner .hero-actions{ justify-content:center; }
+/* overlay uniforme: com o texto no centro, o escurecimento não pode ficar só num lado */
+.hero .hero-overlay, .hero-inner .hero-overlay{
+  background:linear-gradient(180deg, rgba(9,28,54,.62) 0%, rgba(13,44,86,.58) 50%, rgba(9,28,54,.72) 100%);
+}
+
 /* ---------- fundo do hero: Ken Burns (zoom) + parallax de scroll ----------
    O frame é levemente maior que o hero (top:-10%/height:120%) para sobrar
    folga vertical: o JS move o frame em até ±30px ao rolar a página, e essa
@@ -297,6 +309,12 @@ button{ font-family:inherit; cursor:pointer; }
 .kicker{
   font-family:var(--font-title); font-weight:700; letter-spacing:.24em; text-transform:uppercase;
   font-size:11px; color:var(--blue2); margin-bottom:12px; display:block;
+}
+/* kicker sobre foto/fundo escuro: pílula translúcida com texto branco, legível em qualquer trecho da imagem */
+.hero .kicker, .hero-inner .kicker, .photo-section .kicker, .gradient-section .kicker{
+  display:inline-block; color:#fff; background:rgba(9,28,54,.55);
+  border:1px solid rgba(255,255,255,.22); border-radius:20px; padding:6px 14px;
+  letter-spacing:.18em; backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px);
 }
 .section{ padding:96px 0; }
 .section.tight{ padding:64px 0; }
@@ -594,7 +612,8 @@ button{ font-family:inherit; cursor:pointer; }
   .photo-section{ padding:56px 0; min-height:auto; }
   .photo-section.short{ padding:48px 0; }
   .gradient-section{ padding:56px 0; }
-  .hero-inner{ min-height:auto; padding:80px 0 48px; }
+  .hero-inner{ min-height:auto; padding:64px 0; }
+  .hero .wrap{ padding-top:64px; padding-bottom:64px; }
   .pull-quote{ font-size:19px; padding-left:18px; }
   .side-card{ padding:28px 26px; }
   .segment-grid{ grid-template-columns:repeat(2,1fr); }
@@ -608,3 +627,29 @@ button{ font-family:inherit; cursor:pointer; }
   .wa-float span.wa-text{ display:none; }
   .wa-float{ padding:12px; }
 }
+
+/* ==========================================================================
+   Tela de login simples (acesso restrito enquanto o site está em revisão)
+   Não é segurança real: a senha fica no JS. Serve só para afastar visitas casuais.
+   ========================================================================== */
+html.nl-locked body > *:not(#login-gate){ display:none !important; }
+html.nl-locked body{ overflow:hidden; }
+#login-gate{
+  position:fixed; inset:0; z-index:1000; display:flex; align-items:center; justify-content:center; padding:24px;
+  background:linear-gradient(135deg, var(--blue1-dark) 0%, var(--blue1) 55%, var(--blue2) 100%);
+}
+.login-box{
+  width:100%; max-width:380px; background:#fff; border-radius:var(--radius); padding:36px 32px;
+  box-shadow:0 24px 60px rgba(5,15,30,.35); text-align:center;
+}
+.login-box img{ height:56px; width:auto; margin:0 auto 22px; }
+.login-box h2{ font-size:20px; margin-bottom:8px; }
+.login-box p{ font-size:13px; color:var(--muted); margin:0 0 22px; line-height:1.5; }
+.login-box input{
+  width:100%; padding:13px 16px; border:1.5px solid var(--line); border-radius:10px;
+  font-family:var(--font-body); font-size:14px; margin-bottom:12px;
+}
+.login-box input:focus{ outline:none; border-color:var(--blue2); }
+.login-box .btn{ width:100%; justify-content:center; cursor:pointer; }
+.login-error{ display:none; font-size:12.5px; color:#d64f42; margin-top:12px; }
+.login-error.show{ display:block; }

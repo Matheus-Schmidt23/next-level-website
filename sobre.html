@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<script>document.documentElement.classList.add('js');</script>
+<script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('nl_site_unlocked')!=='1')document.documentElement.classList.add('nl-locked');}catch(e){document.documentElement.classList.add('nl-locked');}</script>
 <meta charset="UTF-8">
 <title>Sobre a Next Level | Contabilidade para empresas em crescimento</title>
 <meta name="description" content="Conheça a Next Level Contabilidade e nossa forma de acompanhar empresas em crescimento com gestão contábil, análise tributária, proximidade e segurança.">
@@ -49,13 +49,16 @@
   <!-- ================= HERO INTERNA (foto) ================= -->
   <section class="hero-inner">
     <div class="hero-bg-frame" aria-hidden="true">
-      <img class="hero-bg" src="assets/img/hero-interna.jpg" alt="">
+      <img class="hero-bg" src="assets/img/hero-sobre.jpg" alt="">
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="wrap">
       <span class="kicker">Sobre a Next Level</span>
-      <h1>Contabilidade para quem está construindo o próximo nível do negócio</h1>
-      <p class="lead">A Next Level acompanha empresas em crescimento com uma contabilidade próxima, criteriosa e orientada para decisões mais seguras — da organização das rotinas contábeis à análise tributária.</p>
+      <h1>Números importam. O que você constrói com eles, ainda mais.</h1>
+      <p class="lead">A Next Level nasceu para acompanhar empresários que estão levando seus negócios adiante — e precisam de uma contabilidade capaz de acompanhar essa evolução.</p>
+      <div class="hero-actions" style="margin-top:28px;">
+        <a href="#missao" class="btn btn-white">Conheça nossa forma de trabalhar</a>
+      </div>
     </div>
   </section>
 

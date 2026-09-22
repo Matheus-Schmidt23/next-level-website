@@ -143,7 +143,51 @@ const NEXT_LEVEL_CONFIG = {
     });
   }
 
+  /* ---------- tela de login simples ----------
+   * O <head> de cada página marca <html class="nl-locked"> se a sessão ainda não
+   * foi liberada; aqui montamos a caixa de senha. Não é segurança real (a senha
+   * está no código) — só afasta visitas casuais enquanto o site está em revisão. */
+  const SITE_PASSWORD = "next2026";
+  const UNLOCK_KEY = "nl_site_unlocked";
+
+  function setupLoginGate() {
+    const root = document.documentElement;
+    if (!root.classList.contains("nl-locked")) return;
+
+    const gate = document.createElement("div");
+    gate.id = "login-gate";
+    gate.innerHTML =
+      '<form class="login-box" autocomplete="off">' +
+      '<img src="assets/img/logo-vertical.svg" alt="Next Level Contabilidade">' +
+      "<h2>Acesso restrito</h2>" +
+      "<p>Este site está em revisão. Digite a senha para continuar.</p>" +
+      '<input type="password" placeholder="Senha" aria-label="Senha" autocomplete="new-password" required>' +
+      '<button type="submit" class="btn btn-primary">Entrar</button>' +
+      '<div class="login-error" role="alert">Senha incorreta. Tente novamente.</div>' +
+      "</form>";
+    document.body.appendChild(gate);
+
+    const form = gate.querySelector("form");
+    const input = gate.querySelector("input");
+    const error = gate.querySelector(".login-error");
+    input.focus();
+
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      if (input.value === SITE_PASSWORD) {
+        try { sessionStorage.setItem(UNLOCK_KEY, "1"); } catch (e) { /* aba privada: libera só esta página */ }
+        root.classList.remove("nl-locked");
+        gate.remove();
+      } else {
+        error.classList.add("show");
+        input.value = "";
+        input.focus();
+      }
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
+    setupLoginGate();
     buildWhatsappLinks();
     setupMobileNav();
     highlightActiveNav();

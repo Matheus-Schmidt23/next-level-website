@@ -32,7 +32,10 @@ site/
         ├── simbolo.svg           símbolo isolado (seta) — disponível para materiais futuros
         ├── favicon.svg           favicon gerado a partir do símbolo + fundo azul principal
         ├── hero-home.jpg         fachada desfocada, diagonal (Home — hero)
-        ├── hero-interna.jpg      fachada desfocada, tom mais claro (Sobre/Serviços/Contato — hero)
+        ├── hero-sobre.jpg        prédios desfocados à noite (Sobre — hero; gerada no Magnific)
+        ├── hero-servicos.jpg     mesa com relatórios desfocada (Serviços — hero; gerada no Magnific)
+        ├── hero-clinicas.jpg     corredor de clínica desfocado (Clínicas Médicas — hero e faixa em Serviços; gerada no Magnific)
+        ├── hero-contato.jpg      sala de reunião desfocada (Contato — hero; gerada no Magnific)
         ├── dados-still-01.jpg    still-life de relatórios/gráficos (Home "Diferencial", Serviços "Planos")
         ├── dados-still-02.jpg    still-life de documentos/óculos (Sobre "Missão")
         ├── vidro-predio.jpg      detalhe de fachada de vidro escura (Sobre "Time", Home "Planos teaser")
@@ -170,3 +173,13 @@ publicado como está, como site estático puro:
 - Não há variáveis de ambiente, chaves de API nem backend — é só HTML/CSS/JS/imagens.
 - Se a hospedagem oferecer otimização automática de imagens/CSS/JS (minificação,
   compressão, CDN), pode ser aplicada sem alterar o código-fonte.
+
+---
+
+## Tela de login (acesso restrito)
+
+Enquanto o site está em revisão, todas as páginas pedem uma senha: **next2026**.
+A senha fica em `assets/js/main.js` (`SITE_PASSWORD`) e vale para a aba até ela ser fechada
+(sessionStorage). **Não é segurança real** — a senha está no código-fonte; serve só para
+afastar visitas casuais. Para publicar o site aberto, remova o trecho `nl-locked` do
+`<script>` no `<head>` de cada página.

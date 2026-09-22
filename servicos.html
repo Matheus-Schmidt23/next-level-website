@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<script>document.documentElement.classList.add('js');</script>
+<script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('nl_site_unlocked')!=='1')document.documentElement.classList.add('nl-locked');}catch(e){document.documentElement.classList.add('nl-locked');}</script>
 <meta charset="UTF-8">
 <title>Serviços Contábeis | Next Level Contabilidade</title>
 <meta name="description" content="Conheça os serviços e planos da Next Level Contabilidade para empresas do Simples Nacional e Lucro Presumido, com gestão fiscal, contábil, trabalhista e análise tributária.">
@@ -49,14 +49,16 @@
   <!-- ================= HERO INTERNA (foto) ================= -->
   <section class="hero-inner">
     <div class="hero-bg-frame" aria-hidden="true">
-      <img class="hero-bg" src="assets/img/hero-interna.jpg" alt="">
+      <img class="hero-bg" src="assets/img/hero-servicos.jpg" alt="">
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="wrap">
-      <span class="kicker">Serviços contábeis</span>
-      <h1>Contabilidade estruturada para cada etapa do seu negócio</h1>
-      <p class="lead">Do cumprimento das obrigações à análise tributária, reunimos os serviços necessários para manter sua empresa organizada e acompanhar seu crescimento com mais informação e segurança.</p>
-      <p class="lead">Atendemos principalmente empresas do Simples Nacional e, quando necessário, do Lucro Presumido — desde negócios que estão deixando o MEI até operações mais estruturadas.</p>
+      <span class="kicker">Serviços</span>
+      <h1>Tudo o que sua empresa precisa da contabilidade. E um pouco além.</h1>
+      <p class="lead">Contabilidade, gestão fiscal, folha, relatórios e análise tributária reunidos em uma estrutura que acompanha as necessidades de cada etapa do seu negócio.</p>
+      <div class="hero-actions" style="margin-top:28px;">
+        <a href="#planos" class="btn btn-white">Conheça nossos planos</a>
+      </div>
     </div>
   </section>
 
@@ -277,6 +279,22 @@
           <img src="assets/img/segmentos/posto.png" alt="Posto de combustível">
           <div class="overlay" aria-hidden="true"></div>
           <span class="label">Posto de combustível</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CLÍNICAS MÉDICAS (foto full-bleed, curta — leva para clinicas-medicas.html) ================= -->
+  <section class="photo-section overlay-brand short" id="clinicas-medicas">
+    <img class="bg-img" src="assets/img/hero-clinicas.jpg" alt="Corredor de clínica médica desfocado, em tons de azul">
+    <div class="bg-overlay" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="content-max reveal">
+        <span class="kicker">Clínicas médicas</span>
+        <h2 class="title">Contabilidade especializada para clínicas e profissionais da saúde</h2>
+        <p class="section-sub">Clínicas médicas e odontológicas têm particularidades tributárias próprias, como a equiparação hospitalar. Conheça o acompanhamento da Next Level para a área da saúde.</p>
+        <div class="hero-actions">
+          <a href="clinicas-medicas.html" class="btn btn-white">Conheça a contabilidade para clínicas</a>
         </div>
       </div>
     </div>
