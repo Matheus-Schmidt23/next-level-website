@@ -95,7 +95,7 @@ arquivos HTML para encontrar todos os pontos.**
    no futuro, substitua `5519982874127` nos `.html` e na constante.
 2. **E-mail de contato** — placeholder `XXXXXXX` (`mailto:XXXXXXX`) em `contato.html` e nos
    rodapés de todas as páginas.
-3. **Endereço** — falta o CEP (`XXXXXXX`) em `contato.html`.
+3. **Endereço** — ✅ Rua Rafael Andrade Duarte, 452 — Nova Campinas, Campinas – SP, 13092-180.
 4. **Planos (Bronze / Prata / Ouro)** — nomes, composição e valores em revisão interna
    (Elber e João, conforme reunião de 21/09/2026). Ver nota em `servicos.html`.
 5. **Perguntas frequentes** — perguntas de exemplo; validar com João/Eduarda e
