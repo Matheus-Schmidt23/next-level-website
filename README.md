@@ -5,7 +5,7 @@ Node/npm). Pode ser publicado como está em qualquer hospedagem de arquivos est�
 (Turbocloud, Vercel, Netlify, S3, etc.) — basta subir o conteúdo desta pasta `site/`.
 
 Conteúdo e identidade visual baseados em:
-- `../Textos-do-Site-Next-Level.html` (textos aprovados por página)
+- `../Textos-do-Site-Next-Level.html` (textos finais de cada página, espelhando o site)
 - `../Manual-de-Marca-Next-Level.html` (paleta, tipografia, logotipo, direção de imagem)
 - `../Briefing/` (transcrição da reunião de alinhamento, logos originais, banco de imagens)
 
@@ -15,103 +15,84 @@ Conteúdo e identidade visual baseados em:
 
 ```
 site/
-├── index.html          Home
-├── sobre.html           Sobre
-├── servicos.html         Serviços
-├── contato.html          Contato
-├── clinicas-medicas.html Clínicas Médicas (redução de tributos para clínicas)
-├── README.md            este arquivo
+├── index.html             Home
+├── sobre.html             Sobre
+├── servicos.html          Serviços (planos, segmentos, parceria RP2C, FAQ)
+├── clinicas-medicas.html  Clínicas Médicas (equiparação hospitalar, serviços para a área da saúde)
+├── contato.html           Contato
+├── README.md              este arquivo
 └── assets/
     ├── css/
-    │   └── style.css     folha de estilos única, usada pelas 4 páginas
+    │   └── style.css      folha de estilos única, usada pelas 5 páginas
     ├── js/
-    │   └── main.js       menu mobile, links de WhatsApp, animações, FAQ
+    │   └── main.js        menu mobile, links de WhatsApp, animações, FAQ, tela de login
     └── img/
-        ├── logo-horizontal.svg   logo horizontal (Variação 02 do briefing) — não usada no site hoje
-        ├── logo-vertical.svg     logo empilhada (Variação 01 do briefing) — usada no header, rodapé e tabela de planos
+        ├── logo-horizontal.svg   logo horizontal — não usada no site hoje
+        ├── logo-vertical.svg     logo empilhada — header, rodapé e tabela de planos
         ├── simbolo.svg           símbolo isolado (seta) — disponível para materiais futuros
         ├── favicon.svg           favicon gerado a partir do símbolo + fundo azul principal
         ├── hero-home.jpg         fachada desfocada, diagonal (Home — hero)
         ├── hero-sobre.jpg        prédios desfocados à noite (Sobre — hero; gerada no Magnific)
         ├── hero-servicos.jpg     mesa com relatórios desfocada (Serviços — hero; gerada no Magnific)
-        ├── hero-clinicas.jpg     corredor de clínica desfocado (Clínicas Médicas — hero e faixa em Serviços; gerada no Magnific)
+        ├── hero-clinicas.jpg     corredor de clínica desfocado (Clínicas — hero; faixa de Clínicas em Serviços)
         ├── hero-contato.jpg      sala de reunião desfocada (Contato — hero; gerada no Magnific)
-        ├── dados-still-01.jpg    still-life de relatórios/gráficos (Home "Diferencial", Serviços "Planos")
-        ├── dados-still-02.jpg    still-life de documentos/óculos (Sobre "Missão")
-        ├── vidro-predio.jpg      detalhe de fachada de vidro escura (Sobre "Time", Home "Planos teaser")
-        ├── dados-abstrato.jpg    composição abstrata de gráficos (Serviços "Parceria")
+        ├── dados-still-01.jpg    still-life de relatórios/gráficos (Serviços "Planos", Clínicas "Requisitos")
+        ├── dados-still-02.jpg    still-life de documentos/óculos (Home "Recuperação tributária")
+        ├── dados-abstrato.jpg    composição abstrata de gráficos (Serviços "Parceria RP2C")
+        ├── cta-bg.png            fundo das faixas de CTA final
+        ├── vidro-predio.jpg      fachada de vidro escura — não usada hoje
+        ├── segmentos/            fotos da grade de segmentos da Home (cigarros e distribuidora não usadas)
         └── icons/                ícones vetoriais gerados sob medida (linha, azul da marca)
-            ├── icon-impostos.svg
-            ├── icon-relatorios.svg
-            ├── icon-folha.svg
-            ├── icon-reducao.svg
-            ├── icon-email.svg
-            └── icon-endereco.svg
 ```
 
-### Linguagem visual (redesign fotográfico)
+### Linguagem visual
 
-O site foi desenhado para nunca encadear duas dobras brancas seguidas e para que o
-header de toda página sempre mostre uma foto real (não apenas um gradiente flat).
-Cada página alterna três tipos de seção:
+O header de toda página mostra uma foto real, e nunca há branco sobre branco. Cada
+página alterna quatro tipos de seção:
 
-- **`.photo-section`** — foto full-bleed com overlay (`.overlay-brand` para fotos de
-  arquitetura/clima, `.overlay-dark` para fotos mais escuras/still-life), usada para
-  blocos de conteúdo de alto impacto (Diferencial, Planos, Time, Missão, Parceria).
-  Cards brancos (`.float-card`) podem flutuar por cima com sombra reforçada.
-- **`.section`** (branco) — blocos de leitura mais simples (listas, tags, FAQ),
-  sempre intercalados por uma seção fotográfica ou escura antes e depois.
-- **`.gradient-section`** — fecho de página em gradiente azul cheio (sem foto),
-  usado nos CTAs finais e na seção de contato.
+- **`.photo-section`** — foto full-bleed com overlay (`.overlay-brand` ou `.overlay-dark`),
+  para blocos de alto impacto (Recuperação tributária, Planos, Clínicas, Parceria, Requisitos).
+- **`.section.section-alt`** — fundo Azul Névoa (`--blue-mist`, #D2E6F4), usado sempre que a
+  seção tem cards brancos (features, estatísticas, contato).
+- **`.section`** — fundo branco, para blocos sem cards brancos (segmentos, FAQ). Se houver
+  cards numa seção branca, o CSS os pinta de Azul Suave automaticamente.
+- **`.gradient-section`** — fecho de página em gradiente azul, usado nos CTAs finais.
 
-Sequência por página (P = foto, B = branco, G = gradiente, D = rodapé escuro):
-- Home: P → B → P → B → P → G → D
-- Sobre: P → B → P → P → G → D
-- Serviços: P → B → P → B → P → B → G → D
-- Contato: P → G → D
+Sequência por página (P = foto, A = Azul Névoa, B = branco, G = gradiente, D = rodapé escuro):
+- Home: P → A → P → B → G → D
+- Sobre: P → A → B → G → D
+- Serviços: P → A → P → B → P → P → B → G → D
+- Clínicas: P → A → P → A → B → G → D
+- Contato: P → A → D
 
-Ao editar ou adicionar seções, manter essa alternância — nunca dois `B` seguidos.
+Ao editar ou adicionar seções, manter a alternância — nunca duas seções claras iguais seguidas.
 
 Os ícones em `assets/img/icons/` foram gerados sob medida (vetor, cor sólida
-`#123B73`) para combinar com a paleta da marca, em vez de usar um pacote de ícones
-genérico. Ficam como `<img>` comuns — para trocar algum, basta substituir o arquivo
+`#123B73`). Ficam como `<img>` comuns — para trocar algum, basta substituir o arquivo
 SVG mantendo o mesmo nome.
 
 Não há processo de build: os arquivos podem ser abertos/publicados diretamente. Os únicos
-recursos externos carregados são as fontes do Google Fonts (Sora + Inter), via `<link>` no
-`<head>` de cada página.
+recursos externos carregados são as fontes do Google Fonts (Sora + Inter).
 
 ---
 
-## Pendências de conteúdo antes de publicar
+## Conteúdo — decisões e pendências
 
-Estão sinalizadas no próprio site com um estilo de "nota de produção" (fundo bege,
-borda tracejada laranja) ou com a classe `.todo` (texto laranja sublinhado tracejado),
-para ficarem visíveis durante a revisão. **Buscar por `[a confirmar]` e por `todo` nos
-arquivos HTML para encontrar todos os pontos.**
-
-1. **Número de WhatsApp** — ✅ definido: (19) 98287-4127 (`5519982874127`), já aplicado
-   em todos os `href` e na constante `whatsappNumber` de `assets/js/main.js`. Para trocar
-   no futuro, substitua `5519982874127` nos `.html` e na constante.
-2. **E-mail de contato** — ✅ contato@nextlevelcontabilidade.com.br, em `contato.html` e nos
-   rodapés de todas as páginas.
-3. **Endereço** — ✅ Rua Rafael Andrade Duarte, 452 — Nova Campinas, Campinas – SP, 13092-180.
-4. **Planos (Bronze / Prata / Ouro)** — nomes, composição e valores em revisão interna
-   (Elber e João, conforme reunião de 21/09/2026). Ver nota em `servicos.html`.
-5. **Perguntas frequentes** — perguntas de exemplo; validar com João/Eduarda e
-   completar com dúvidas reais recebidas pelo time.
-6. **Fotos da equipe (João e Gabriel)** — a página `sobre.html` usa iniciais como
-   avatar provisório. Substituir por fotos reais quando disponíveis.
-   **Importante:** não incluir nome ou imagem do Elber na página Sobre (conflito
-   ético entre advocacia e contabilidade, combinado em reunião — a imagem da marca
-   fica vinculada ao João).
-7. **Página para o público da área médica** (especialidade do Elber) — não faz parte
-   deste site institucional. Deve ser uma página própria e discreta, usada só em
-   campanhas, e fica para uma etapa seguinte.
-
-Depois de resolver os itens acima, as classes `.todo` e os blocos `.note-inline`
-podem ser removidos do HTML (ou deixados — eles só aparecem como texto normal, não
-quebram o layout).
+1. **WhatsApp** — (19) 98287-4127 (`5519982874127`), em todos os `href` e na constante
+   `whatsappNumber` de `assets/js/main.js`. Texto padrão dos botões: **"Atendimento pelo WhatsApp"**.
+2. **E-mail** — contato@nextlevelcontabilidade.com.br (Contato e rodapés).
+3. **Endereço** — Rua Rafael Andrade Duarte, 452 — Nova Campinas, Campinas – SP, 13092-180.
+4. **Planos** — Bronze, Prata (selo "Recomendado"), Ouro e Diamante, com valores publicados em
+   `servicos.html`. Certificado digital incluso em todos; folha/pró-labore de 1 sócio inclusa
+   (Diamante: 2 sócios + 1 funcionário); pessoas adicionais custam R$ 50,00/mês.
+5. **Abertura de empresas** — a Next Level abre o CNPJ e cuida dos registros fiscais; a RP2C
+   define a estrutura societária e elabora os atos societários.
+6. **Clínicas Médicas** — página própria no menu (Serviços › Clínicas Médicas) e no rodapé,
+   com chamada dentro de Serviços. Substitui a ideia inicial de página só para campanhas.
+7. **Equipe** — o site não cita nomes. **Não incluir nome ou imagem do Elber** (conflito ético
+   entre advocacia e contabilidade, combinado em reunião).
+8. **A confirmar com o cliente** — a afirmação "escritórios em vários estados do Brasil" no FAQ
+   de abertura de empresa em `servicos.html`.
 
 ---
 

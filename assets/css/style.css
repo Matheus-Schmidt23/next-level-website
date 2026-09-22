@@ -9,7 +9,8 @@
   --blue1-dark:#0d2c56;
   --blue2:#1976B9;       /* azul secundário */
   --blue3:#49A9DF;       /* azul destaque */
-  --blue-soft:#EAF5FB;   /* fundo suave */
+  --blue-soft:#EAF5FB;   /* azul suave — fundo de cards e ícones */
+  --blue-mist:#D2E6F4;   /* azul névoa — fundo de seções */
   --white:#FFFFFF;
   --graphite:#252A30;    /* texto / apoio */
   --ink:#252A30;
@@ -316,10 +317,16 @@ button{ font-family:inherit; cursor:pointer; }
   border:1px solid rgba(255,255,255,.22); border-radius:20px; padding:6px 14px;
   letter-spacing:.18em; backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px);
 }
-.section{ padding:96px 0; }
+.section{ padding:96px 0; background:#fff; }
 .section.tight{ padding:64px 0; }
-/* seção com fundo azul suave — separa duas seções claras seguidas */
-.section-alt{ background:#D2E6F4; }
+/* seção com fundo Azul Névoa — usada sob cards brancos e para separar duas seções claras seguidas */
+.section-alt{ background:var(--blue-mist); }
+.section-alt .section-sub{ color:#4a5563; }
+/* seção branca: cards ficam em azul suave, para nunca haver branco sobre branco */
+.section:not(.section-alt) :is(.stat-card, .feature-item, .contact-card){
+  background:var(--blue-soft); border-color:#cfe4f2; box-shadow:none;
+}
+.section:not(.section-alt) :is(.feature-item, .contact-card) .ico{ background:#fff; }
 .section-head{ max-width:640px; margin-bottom:48px; }
 .section h2.title{ font-size:clamp(26px,3.4vw,36px); font-weight:700; }
 .section-sub{ font-size:14.5px; color:var(--muted); margin-top:10px; }
