@@ -27,8 +27,8 @@ site/
     ├── js/
     │   └── main.js       menu mobile, links de WhatsApp, animações, FAQ
     └── img/
-        ├── logo-horizontal.svg   logo usada no header/footer (Variação 02 do briefing)
-        ├── logo-vertical.svg     logo empilhada (Variação 01 do briefing) — não usada ainda, disponível para materiais futuros
+        ├── logo-horizontal.svg   logo horizontal (Variação 02 do briefing) — não usada no site hoje
+        ├── logo-vertical.svg     logo empilhada (Variação 01 do briefing) — usada no header, rodapé e tabela de planos
         ├── simbolo.svg           símbolo isolado (seta) — disponível para materiais futuros
         ├── favicon.svg           favicon gerado a partir do símbolo + fundo azul principal
         ├── hero-home.jpg         fachada desfocada, diagonal (Home — hero)
@@ -93,7 +93,7 @@ arquivos HTML para encontrar todos os pontos.**
 1. **Número de WhatsApp** — ✅ definido: (19) 98287-4127 (`5519982874127`), já aplicado
    em todos os `href` e na constante `whatsappNumber` de `assets/js/main.js`. Para trocar
    no futuro, substitua `5519982874127` nos `.html` e na constante.
-2. **E-mail de contato** — placeholder `XXXXXXX` (`mailto:XXXXXXX`) em `contato.html` e nos
+2. **E-mail de contato** — ✅ contato@nextlevelcontabilidade.com.br, em `contato.html` e nos
    rodapés de todas as páginas.
 3. **Endereço** — ✅ Rua Rafael Andrade Duarte, 452 — Nova Campinas, Campinas – SP, 13092-180.
 4. **Planos (Bronze / Prata / Ouro)** — nomes, composição e valores em revisão interna
