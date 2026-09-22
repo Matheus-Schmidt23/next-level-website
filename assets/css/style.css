@@ -318,6 +318,8 @@ button{ font-family:inherit; cursor:pointer; }
 }
 .section{ padding:96px 0; }
 .section.tight{ padding:64px 0; }
+/* seção com fundo azul suave — separa duas seções claras seguidas */
+.section-alt{ background:var(--blue-soft); }
 .section-head{ max-width:640px; margin-bottom:48px; }
 .section h2.title{ font-size:clamp(26px,3.4vw,36px); font-weight:700; }
 .section-sub{ font-size:14.5px; color:var(--muted); margin-top:10px; }
