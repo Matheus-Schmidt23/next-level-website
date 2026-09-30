@@ -158,7 +158,7 @@ const NEXT_LEVEL_CONFIG = {
     gate.id = "login-gate";
     gate.innerHTML =
       '<form class="login-box" autocomplete="off">' +
-      '<img src="assets/img/logo-light.png" alt="Next Level Contabilidade">' +
+      '<img src="assets/img/logo-light.svg" alt="Next Level Contabilidade">' +
       "<h2>Acesso restrito</h2>" +
       "<p>Este site está em revisão. Digite a senha para continuar.</p>" +
       '<input type="password" placeholder="Senha" aria-label="Senha" autocomplete="new-password" required>' +
