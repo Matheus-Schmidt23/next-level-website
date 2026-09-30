@@ -27,10 +27,12 @@ site/
     ├── js/
     │   └── main.js        menu mobile, links de WhatsApp, animações, FAQ, tela de login
     └── img/
-        ├── logo-horizontal.svg   logo horizontal — não usada no site hoje
-        ├── logo-vertical.svg     logo empilhada — header, rodapé e tabela de planos
-        ├── simbolo.svg           símbolo isolado (seta) — disponível para materiais futuros
-        ├── favicon.svg           favicon gerado a partir do símbolo + fundo azul principal
+        ├── logo-light.png        logo (texto azul-marinho + seta azul) — fundos claros: header, login, tabela de planos
+        ├── logo-dark.png         logo (texto branco + seta azul) — fundos escuros: rodapé
+        ├── logo-horizontal.svg   logo antiga — não usada no site hoje
+        ├── logo-vertical.svg     logo antiga — não usada no site hoje
+        ├── simbolo.svg           símbolo antigo isolado — não usado no site hoje
+        ├── favicon.svg           favicon gerado a partir do símbolo antigo + fundo azul principal
         ├── hero-home.jpg         fachada desfocada, diagonal (Home — hero)
         ├── hero-sobre.jpg        prédios desfocados à noite (Sobre — hero; gerada no Magnific)
         ├── hero-servicos.jpg     mesa com relatórios desfocada (Serviços — hero; gerada no Magnific)
