@@ -532,15 +532,17 @@ button{ font-family:inherit; cursor:pointer; }
 .contact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
 .contact-card{
   background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:26px 26px;
-  box-shadow:var(--shadow-soft); display:flex; gap:16px; align-items:flex-start;
+  box-shadow:var(--shadow-soft); display:flex; gap:16px; align-items:flex-start; min-width:0;
 }
+.contact-card > div{ min-width:0; }
 .contact-card .ico{
   flex:none; width:60px; height:60px; border-radius:14px; background:var(--blue-soft); color:var(--blue2);
   display:flex; align-items:center; justify-content:center;
 }
 .contact-card .ico svg, .contact-card .ico img{ width:36px; height:36px; }
 .contact-card h3{ font-size:14.5px; margin-bottom:4px; }
-.contact-card p{ font-size:13.5px; }
+.contact-card p{ font-size:13.5px; overflow-wrap:break-word; }
+.contact-card p a{ overflow-wrap:break-word; }
 
 /* ---------- footer ---------- */
 .site-footer{ background:var(--graphite); color:#c9d3dc; padding:64px 0 28px; }
@@ -635,6 +637,7 @@ button{ font-family:inherit; cursor:pointer; }
   .plan-card.featured::before{ left:50%; transform:translateX(-50%); }
   .wa-float span.wa-text{ display:none; }
   .wa-float{ padding:12px; }
+  .hero-actions .btn{ width:100%; white-space:normal; text-align:center; }
 }
 
 /* ==========================================================================
