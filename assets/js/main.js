@@ -143,6 +143,29 @@ const NEXT_LEVEL_CONFIG = {
     });
   }
 
+  /* ---------- planos no mobile: abas que mostram um plano por vez ---------- */
+  function setupPlanTabs() {
+    const tabs = document.querySelectorAll(".plan-tab");
+    const panels = document.querySelectorAll(".plan-panel");
+    if (!tabs.length) return;
+
+    function select(plan) {
+      tabs.forEach(function (t) {
+        const on = t.getAttribute("data-plan") === plan;
+        t.classList.toggle("is-active", on);
+        t.setAttribute("aria-selected", String(on));
+      });
+      panels.forEach(function (p) {
+        p.hidden = p.getAttribute("data-plan") !== plan;
+      });
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener("click", function () { select(t.getAttribute("data-plan")); });
+    });
+    select("prata");
+  }
+
   /* ---------- tela de login simples ----------
    * O <head> de cada página marca <html class="nl-locked"> se a sessão ainda não
    * foi liberada; aqui montamos a caixa de senha. Não é segurança real (a senha
@@ -194,5 +217,6 @@ const NEXT_LEVEL_CONFIG = {
     setupRevealOnScroll();
     setupHeroParallax();
     setupFaqAccordion();
+    setupPlanTabs();
   });
 })();

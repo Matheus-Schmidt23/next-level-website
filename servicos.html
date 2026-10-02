@@ -107,7 +107,85 @@
         <p class="section-sub">Nossos planos acompanham diferentes faixas de faturamento e necessidades contábeis. Compare as opções e encontre a estrutura mais adequada para o estágio atual do seu negócio.</p>
       </div>
 
-      <p class="table-hint">Deslize a tabela para o lado para comparar todos os planos &rarr;</p>
+      <!-- versão mobile dos planos (a tabela abaixo aparece só em telas maiores) -->
+      <div class="plan-mobile reveal">
+        <div class="plan-tabs" role="tablist" aria-label="Escolha o plano">
+          <button type="button" class="plan-tab" role="tab" data-plan="bronze">Bronze</button>
+          <button type="button" class="plan-tab is-active" role="tab" data-plan="prata">Prata</button>
+          <button type="button" class="plan-tab" role="tab" data-plan="ouro">Ouro</button>
+          <button type="button" class="plan-tab" role="tab" data-plan="diamante">Diamante</button>
+        </div>
+
+        <article class="plan-panel" id="plano-bronze" role="tabpanel" data-plan="bronze">
+          <header class="plan-panel-head">
+            <span class="plan-name">Bronze</span>
+            <span class="plan-price">R$ 299 <small>por mês</small></span>
+          </header>
+          <ul class="plan-features">
+            <li><span class="lbl">Certificado Digital</span><span class="val"><span class="check" aria-label="Incluso"></span></span></li>
+            <li><span class="lbl">Contabilidade</span><span class="val">Completa</span></li>
+            <li><span class="lbl">Abertura do CNPJ</span><span class="val">R$ 990,00</span></li>
+            <li><span class="lbl">Faturamento mensal</span><span class="val">Até R$ 50 mil</span></li>
+            <li><span class="lbl">Simples Nacional</span><span class="val"><span class="check" aria-label="Incluso"></span></span></li>
+            <li><span class="lbl">Folha e pró-labore inclusos</span><span class="val">1 sócio grátis</span></li>
+            <li><span class="lbl">Assessoria para migração de regime tributário</span><span class="val"><span class="cross" aria-label="Não incluso"></span></span></li>
+          </ul>
+          <a href="https://wa.me/5519982874127?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20Bronze%20da%20Next%20Level." target="_blank" rel="noopener" class="btn btn-primary" data-wa-link data-wa-message="Olá! Tenho interesse no plano Bronze da Next Level.">Conhecer o plano</a>
+        </article>
+
+        <article class="plan-panel is-featured" id="plano-prata" role="tabpanel" data-plan="prata">
+          <header class="plan-panel-head">
+            <span class="badge">Recomendado</span>
+            <span class="plan-name">Prata</span>
+            <span class="plan-price">R$ 499 <small>por mês</small></span>
+          </header>
+          <ul class="plan-features">
+            <li><span class="lbl">Certificado Digital</span><span class="val"><span class="check" aria-label="Incluso"></span></span></li>
+            <li><span class="lbl">Contabilidade</span><span class="val">Completa</span></li>
+            <li><span class="lbl">Abertura do CNPJ</span><span class="val">R$ 990,00</span></li>
+            <li><span class="lbl">Faturamento mensal</span><span class="val">R$ 50.001 a R$ 120 mil</span></li>
+            <li><span class="lbl">Simples Nacional</span><span class="val"><span class="check" aria-label="Incluso"></span></span></li>
+            <li><span class="lbl">Folha e pró-labore inclusos</span><span class="val">1 sócio grátis</span></li>
+            <li><span class="lbl">Assessoria para migração de regime tributário</span><span class="val"><span class="check" aria-label="Incluso"></span></span></li>
+          </ul>
+          <a href="https://wa.me/5519982874127?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20Prata%20da%20Next%20Level." target="_blank" rel="noopener" class="btn btn-primary" data-wa-link data-wa-message="Olá! Tenho interesse no plano Prata da Next Level.">Conhecer o plano</a>
+        </article>
+
+        <article class="plan-panel" id="plano-ouro" role="tabpanel" data-plan="ouro">
+          <header class="plan-panel-head">
+            <span class="plan-name">Ouro</span>
+            <span class="plan-price">R$ 699 <small>por mês</small></span>
+          </header>
+          <ul class="plan-features">
+            <li><span class="lbl">Certificado Digital</span><span class="val"><span class="check" aria-label="Incluso"></span></span></li>
+            <li><span class="lbl">Contabilidade</span><span class="val">Completa + DRE</span></li>
+            <li><span class="lbl">Abertura do CNPJ</span><span class="val">R$ 990,00</span></li>
+            <li><span class="lbl">Faturamento mensal</span><span class="val">R$ 120.001 a R$ 180 mil</span></li>
+            <li><span class="lbl">Simples Nacional</span><span class="val"><span class="check" aria-label="Incluso"></span></span></li>
+            <li><span class="lbl">Folha e pró-labore inclusos</span><span class="val">1 sócio grátis</span></li>
+            <li><span class="lbl">Assessoria para migração de regime tributário</span><span class="val"><span class="check" aria-label="Incluso"></span></span></li>
+          </ul>
+          <a href="https://wa.me/5519982874127?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20Ouro%20da%20Next%20Level." target="_blank" rel="noopener" class="btn btn-primary" data-wa-link data-wa-message="Olá! Tenho interesse no plano Ouro da Next Level.">Conhecer o plano</a>
+        </article>
+
+        <article class="plan-panel" id="plano-diamante" role="tabpanel" data-plan="diamante">
+          <header class="plan-panel-head">
+            <span class="plan-name">Diamante</span>
+            <span class="plan-price">R$ 999 <small>por mês</small></span>
+          </header>
+          <ul class="plan-features">
+            <li><span class="lbl">Certificado Digital</span><span class="val"><span class="check" aria-label="Incluso"></span></span></li>
+            <li><span class="lbl">Contabilidade</span><span class="val">Completa + DRE, balanço e balancete</span></li>
+            <li><span class="lbl">Abertura do CNPJ</span><span class="val">R$ 990,00</span></li>
+            <li><span class="lbl">Faturamento mensal</span><span class="val">Acima de R$ 180 mil</span></li>
+            <li><span class="lbl">Simples Nacional</span><span class="val"><span class="check" aria-label="Incluso"></span></span></li>
+            <li><span class="lbl">Folha e pró-labore inclusos</span><span class="val">2 sócios + 1 funcionário grátis</span></li>
+            <li><span class="lbl">Assessoria para migração de regime tributário</span><span class="val"><span class="check" aria-label="Incluso"></span></span></li>
+          </ul>
+          <a href="https://wa.me/5519982874127?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20Diamante%20da%20Next%20Level." target="_blank" rel="noopener" class="btn btn-primary" data-wa-link data-wa-message="Olá! Tenho interesse no plano Diamante da Next Level.">Conhecer o plano</a>
+        </article>
+      </div>
+
       <div class="pricing-table-wrap reveal">
         <table class="pricing-table">
           <thead>

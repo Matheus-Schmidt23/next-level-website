@@ -86,7 +86,9 @@ recursos externos carregados são as fontes do Google Fonts (Sora + Inter).
 2. **E-mail** — contato@nextlevelcontabilidade.com.br (Contato e rodapés).
 3. **Endereço** — Rua Rafael Andrade Duarte, 452 — Nova Campinas, Campinas – SP, 13092-180.
 4. **Planos** — Bronze, Prata (selo "Recomendado"), Ouro e Diamante, com valores publicados em
-   `servicos.html`. Certificado digital incluso em todos; folha/pró-labore de 1 sócio inclusa
+   `servicos.html`. A tabela comparativa aparece acima de 820px; abaixo disso entra uma versão
+   mobile separada (`.plan-mobile`: abas + cartão por plano). Ao mudar valores ou itens, editar
+   **os dois** blocos (tabela e `.plan-mobile`) no HTML. Certificado digital incluso em todos; folha/pró-labore de 1 sócio inclusa
    (Diamante: 2 sócios + 1 funcionário); pessoas adicionais custam R$ 50,00/mês.
 5. **Abertura de empresas** — a Next Level abre o CNPJ e cuida dos registros fiscais; a RP2C
    define a estrutura societária e elabora os atos societários.
